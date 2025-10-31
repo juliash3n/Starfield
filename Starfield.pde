@@ -57,8 +57,8 @@ class OddballParticle extends Particle{
   startY = 250;
   }
   void move(){
-    endX = startX + (int)(Math.random()*7-3);
-    endY = startY + (int)(Math.random()*7-3);
+    endX = startX + (int)(Math.random()*7-3.5);
+    endY = startY + (int)(Math.random()*7-3.5);
     startX = endX;
     startY = endY;
     
