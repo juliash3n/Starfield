@@ -47,6 +47,11 @@ void move(){
   myX = 250;
   myY = 250;
   }
+  if(dist((float)myX,(float)myY,mouseX,mouseY)<10){
+    mySpeed = 0;
+    //for (int i = 0; i<flight.length; i++){
+    //flight[i].mySpeed = 0;
+  }
  }
 } //end of Particle class
 
@@ -57,8 +62,8 @@ class OddballParticle extends Particle{
   startY = 250;
   }
   void move(){
-    endX = startX + (int)(Math.random()*7-3.5);
-    endY = startY + (int)(Math.random()*7-3.5);
+    endX = startX + (int)(Math.random()*7-3);
+    endY = startY + (int)(Math.random()*7-3);
     startX = endX;
     startY = endY;
     
@@ -70,6 +75,7 @@ class OddballParticle extends Particle{
       startX = 250;
       startY = 250;
       }
+     
   }
   void show(){
     ellipse(startX, endY, 50, 50);
